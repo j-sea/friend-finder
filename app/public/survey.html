@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="/api/friends" method="POST">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Friend Finder Survey</h1>
+                    <p>Select how much you agree or disagree with each statement to find like-minded people!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Morality is relative. Any action can be justified depending on the situation.</p>
+                    <select name="q1" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>All people are born innocent. It is only the environment they grow up in and teachings they receive from their elders and peers that solidify any impropriety.</p>
+                    <select name="q2" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Universal extension of goodwill and love towards others, no matter the actions they have taken, is necessary to building a truly just society.</p>
+                    <select name="q3" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>It is more beneficial to a society to rehabilitate people who have done wrong to it than to punish and excommunicate them entirely.</p>
+                    <select name="q4" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>You have an obligation to fulfill the role in society you were born into.</p>
+                    <select name="q5" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Your decisions in life can greatly impact the world if you make them with care.</p>
+                    <select name="q6" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>All people can be good or bad regardless of race, gender, sexuality, religion, political affiliation, or financial bracket.</p>
+                    <select name="q7" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Humans as a whole have the ability to make lasting changes to nature, for good or for bad.</p>
+                    <select name="q8" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Science, by itself, is an important tool which helps guide the direction of society in a better direction that holds no biases when performed following the scientific method rigidly.</p>
+                    <select name="q9" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Climate change is the single greatest issue facing humankind today.</p>
+                    <select name="q10" class="form-control mb-10">
+                        <option value="5">5 (Strongly Agree)</option>
+                        <option value="4">4</option>
+                        <option value="3">3 (No Opinion)</option>
+                        <option value="2">2</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Take the Survey!</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
