@@ -1,24 +1,25 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/tables', function (req,res){
-    // res.json(tables);
-});
+var friends = require('../data/friends');
 
-//gets all waitlist 
-router.get('/waitlist', function (req,res){
-    // res.json(waitlist);
-});
+router.post('/friends', function (req, res) {
+    var name = req.body.name;
+    var photo = req.body.photo;
 
-//creates new reservation data based on how many people have tables 
-router.post('/tables', function (req,res){
-//    var newReservation = req.body;
-//    if(tables.length<5){
-//         tables.push(newReservation);
-//    } else {
-//        waitlist.push(newReservation);
-//    }
-//    res.json(newReservation);
+    var answers = [];
+    for (let i = 1; i <= 10; i++) {
+        const answer = req.body['q' + i];
+        answers.push(answer);
+    }
+
+    var lowestFriendScore = NUMBER.MAX_SAFE_INTEGER;
+    var lowestFriendIndex = -1;
+
+    friends.forEach(function (friend, index) {
+
+        // friend.scores.
+    });
 });
 
 module.exports = router;
