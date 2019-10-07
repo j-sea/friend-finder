@@ -8,19 +8,21 @@
     <title>Friend Finder</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <form action="/api/friends" method="POST">
+    <form action="/api/friends" method="POST" id="survey-form">
         <div class="container">
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h1>Friend Finder Survey</h1>
                     <p>Select how much you agree or disagree with each statement to find like-minded people!</p>
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>About You</h2>
                     <label class="d-block">Name (Required)
                         <input type="text" name="name" class="form-control" required>
@@ -31,7 +33,7 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 1</h2>
                     <p>Morality is relative. Any action can be justified depending on the situation.</p>
                     <select name="q1" class="form-control" required>
@@ -45,9 +47,9 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 2</h2>
-                    <p>All people are born innocent. It is only the environment they grow up in and teachings they receive from their elders and peers that solidify any impropriety.</p>
+                    <p>All people are born with no sense of morality. It is only the environment they grow up in and teachings they receive that mold their morality.</p>
                     <select name="q2" class="form-control" required>
                         <option value="" selected>--Select One--</option>
                         <option value="5">5 (Strongly Agree)</option>
@@ -59,7 +61,7 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 3</h2>
                     <p>Universal extension of goodwill and love towards others, no matter the actions they have taken, is necessary to building a truly just society.</p>
                     <select name="q3" class="form-control" required>
@@ -73,7 +75,7 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 4</h2>
                     <p>It is more beneficial to a society to rehabilitate people who have done wrong to it than to punish and excommunicate them entirely.</p>
                     <select name="q4" class="form-control" required>
@@ -87,7 +89,7 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 5</h2>
                     <p>You have an obligation to fulfill the role in society you were born into.</p>
                     <select name="q5" class="form-control" required>
@@ -101,9 +103,9 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 6</h2>
-                    <p>Your decisions in life can greatly impact the world if you make them with care.</p>
+                    <p>People's individual decisions and actions in life will have no impact on the world as a whole.</p>
                     <select name="q6" class="form-control" required>
                         <option value="" selected>--Select One--</option>
                         <option value="5">5 (Strongly Agree)</option>
@@ -115,7 +117,7 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 7</h2>
                     <p>All people can be good or bad regardless of race, gender, sexuality, religion, political affiliation, or financial bracket.</p>
                     <select name="q7" class="form-control" required>
@@ -129,9 +131,9 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 8</h2>
-                    <p>Humans as a whole have the ability to make lasting changes to nature, for good or for bad.</p>
+                    <p>Education is an important tool that helps humans as a whole make meaningful progress as a society, avoiding mistakes and fruitless endeavors we've made in the past.</p>
                     <select name="q8" class="form-control" required>
                         <option value="" selected>--Select One--</option>
                         <option value="5">5 (Strongly Agree)</option>
@@ -143,9 +145,9 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 9</h2>
-                    <p>Science, by itself, is an important tool which helps guide the direction of society in a better direction that holds no biases when performed following the scientific method rigidly.</p>
+                    <p>The wealth of humanity as a whole is more important than the health of humanity as a whole.</p>
                     <select name="q9" class="form-control" required>
                         <option value="" selected>--Select One--</option>
                         <option value="5">5 (Strongly Agree)</option>
@@ -157,9 +159,9 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <h2>Question 10</h2>
-                    <p>Climate change is the single greatest issue facing humankind today.</p>
+                    <p>Mental health issues are a manifestation of a person's own negative thoughts and are not caused by chemical imbalances or other malformations of the incredibly-complex human brain.</p>
                     <select name="q10" class="form-control" required>
                         <option value="" selected>--Select One--</option>
                         <option value="5">5 (Strongly Agree)</option>
@@ -171,16 +173,23 @@
                 </div>
             </div>
             <div class="row pb-4">
-                <div class="col-6">
+                <div class="col-12 col-lg-10 col-xl-8">
                     <button class="btn btn-primary" type="submit">Take the Survey!</button>
                 </div>
             </div>
         </div>
     </form>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <div id="friend-result">
+        <h2 id="friend-name"></h2>
+        <img id="friend-image">
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="./js/survey.js" type="text/javascript"></script>
 </body>
 
 </html>

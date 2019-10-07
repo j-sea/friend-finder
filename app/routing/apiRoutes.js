@@ -1,25 +1,14 @@
+// Import our Node.js packages
 var express = require('express');
+
+// Get a new instance of an Express Router
 var router = express.Router();
 
-var friends = require('../data/friends');
+// Set up our external routing for GET requests on our friends API
+router.get('/friends', require('./api/get-friends'));
 
-router.post('/friends', function (req, res) {
-    var name = req.body.name;
-    var photo = req.body.photo;
+// Set up our external routing for POST requests on our friends API
+router.post('/friends', require('./api/post-friends'));
 
-    var answers = [];
-    for (let i = 1; i <= 10; i++) {
-        const answer = req.body['q' + i];
-        answers.push(answer);
-    }
-
-    var lowestFriendScore = NUMBER.MAX_SAFE_INTEGER;
-    var lowestFriendIndex = -1;
-
-    friends.forEach(function (friend, index) {
-
-        // friend.scores.
-    });
-});
-
+// Export our API routes
 module.exports = router;
